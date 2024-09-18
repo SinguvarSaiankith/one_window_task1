@@ -1,0 +1,122 @@
+/* General app styling */
+
+.App {
+    font-family: Segoe UI;
+    text-align: center;
+    padding: 20px;
+    background-color: #dae4ebb3;
+    /* Main background color (light blue shade) */
+}
+
+
+/* Container for the cards */
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    /* Stacking cards one below the other */
+    align-items: center;
+    gap: 20px;
+    /* Space between each card */
+    padding: 20px;
+}
+
+
+/* Individual card styling with CSS Grid */
+
+.card {
+    background-color: #e7ebf2e2;
+    /* Card background (lighter than main) */
+    border: 1px solid#ddd;
+    border-radius: 8px;
+    padding: 10px;
+    /* Decreased padding to reduce gap between card border and content */
+    width: 100%;
+    max-width: 1000px;
+    /* Increased max-width for larger layout */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #e6f0ff;
+    /* Light shade of blue (lighter version of the main background) */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two-column layout */
+    gap: 20 px;
+    /* Space between grid items */
+    align-items: start;
+    /* Align grid items at the top */
+}
+
+
+/* Hover effect for better interactivity */
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow on hover */
+}
+
+
+/* Country name styling */
+
+.card h2 {
+    font-size: 24px;
+    color: #004080;
+    /* Dark blue text color */
+    margin: 0 0 10px 0;
+    /* Removed bottom margin and added small bottom margin */
+    grid-column: span 2;
+    /* Country name spans across both columns */
+    padding: 10px 10px;
+    /* Added padding to reduce gap between border and text */
+}
+
+
+/* Left column content (Academic Reputation) */
+
+.academic-reputation {
+    text-align: left;
+    margin-left: 30px;
+}
+
+
+/* Right column content (Cost of Education and Living Expenses) */
+
+.education-expenses {
+    text-align: left;
+    margin-left: 110px;
+}
+
+
+/* Styling the card headings and paragraphs */
+
+.card h3 {
+    font-size: 18px;
+    color: #003366;
+    /* Slightly darker shade for subtitles */
+    margin-bottom: 5px;
+    /* Reduced margin to decrease space */
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    /* Reduced margin to decrease space */
+}
+
+
+/* Responsive design for small screens */
+
+@media (max-width: 768px) {
+    .card {
+        grid-template-columns: 1fr;
+        /* Stack content in one column on small screens */
+        text-align: left;
+    }
+    .education-expenses {
+        text-align: left;
+        /* Ensure text alignment is consistent */
+    }
+}
